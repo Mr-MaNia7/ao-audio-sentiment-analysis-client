@@ -8,7 +8,7 @@ const Faq = () => {
         <SectionTitle
           subtitle="FAQ"
           title="Any Questions? Answered"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Here are some of the most frequently asked questions about the AOSA Toolkit. If you have any other questions, feel free to contact us."
           width="640px"
           center
         />
@@ -16,31 +16,31 @@ const Faq = () => {
         <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="How to use TailGrids?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="How does the Afan Oromo Sentiment Analysis Toolkit work?"
+              answer="The Afan Oromo Sentiment Analysis Toolkit uses advanced natural language processing techniques to analyze the sentiment of audio recordings in the Afan Oromo language. Simply record or upload your audio, and the toolkit will provide a sentiment analysis of the content."
             />
             <SingleFaq
-              question="How to download icons from LineIcons?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Who can use this toolkit?"
+              answer="The toolkit is designed to be user-friendly and can be used by anyone, including researchers, students, and individuals interested in analyzing the sentiment of Afan Oromo audio content. No technical expertise is required."
             />
             <SingleFaq
-              question="Is GrayGrids part of UIdeck?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="What audio formats are supported?"
+              answer="The toolkit supports common audio formats such as MP3, WAV, and AAC. You can either record audio directly using the toolkit or upload a supported audio file for analysis."
             />
           </div>
 
           <div className="w-full px-4 lg:w-1/2">
             <SingleFaq
-              question="Can I use this template for commercial project?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Is there a limit to the length of audio that can be analyzed?"
+              answer="The toolkit is designed to handle audio recordings of various lengths. However, for optimal performance, it is recommended to keep the recordings under 10 minutes. Longer recordings may take more time to process."
             />
             <SingleFaq
-              question="Do you have plan to releasing Play Pro?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="How accurate is the sentiment analysis?"
+              answer="The sentiment analysis accuracy depends on various factors, including audio quality and clarity of speech. The toolkit uses state-of-the-art NLP models, but results may vary. It is always good to review the analysis for important use cases."
             />
             <SingleFaq
-              question="Where and how to host this template?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Is my audio data secure?"
+              answer="Yes, your audio data is secure. The Afan Oromo Sentiment Analysis Toolkit uses secure protocols to process and store audio data. Your recordings and analysis results are not shared with third parties."
             />
           </div>
         </div>

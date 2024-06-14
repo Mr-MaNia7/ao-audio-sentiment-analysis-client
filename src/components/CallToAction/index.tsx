@@ -16,14 +16,14 @@ const CallToAction = () => {
                   </span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  Play allows you to upload or record an audio to have a sentiment analysis of the audio.
+                  AOSA allows you to upload or record an audio to have a sentiment analysis of the audio.
                   It also allows you to view the sentiment analysis of the audio.
                 </p>
                 <Link
-                  href="/"
+                  href="/audio-sentiment-analysis"
                   className="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"
                 >
-                  Start using Play
+                  Start using AOSA
                 </Link>
               </div>
             </div>

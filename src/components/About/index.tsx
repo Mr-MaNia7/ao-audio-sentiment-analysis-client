@@ -15,21 +15,13 @@ const About = () => {
                   Brilliant Toolkit to analyse the sentiment of the Afan Oromo Lanaguage from audio.
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  The Afan Oromo Sentiment Analysis Toolkit is a tool that is used to analyse the sentiment of the Afan Oromo language from audio. 
-                  The toolkit is built using the latest technologies and is designed to be user-friendly. The toolkit is designed to be easy to use and can be used by anyone, regardless of their technical expertise. 
-                  The toolkit is designed to be used by researchers, students, and anyone else who is interested in analysing the sentiment of the Afan Oromo language from audio. The toolkit is designed to be used by researchers, students, and anyone else who is interested in analysing the sentiment of the Afan Oromo language from audio. 
-                  <br /> <br />
-                  The toolkit is designed to be used by researchers, students, and anyone else who is interested in analysing the sentiment of the Afan Oromo language from audio. 
-                  The toolkit is designed to be used by researchers, students, and anyone else who is interested in analysing the sentiment of the Afan Oromo language from audio. 
-                  The toolkit is designed to be used by researchers, students, and anyone else who is interested in analysing the sentiment of the Afan Oromo language from audio. 
-
+                  The Afan Oromo Sentiment Analysis Toolkit is a sophisticated tool designed to analyze the sentiment of the Afan Oromo language from audio recordings. Built with the latest technologies, this user-friendly toolkit caters to researchers, students, and anyone interested in sentiment analysis of the Afan Oromo language. It is intuitive and accessible, requiring no technical expertise to operate. Whether you are a researcher conducting language studies or a student exploring sentiment analysis, this toolkit provides reliable and efficient results to support your endeavors.
                 </p>
-
                 <a
-                  href="/#"
+                  href="/about"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
                 >
-                  learn More
+                  Learn More
                 </a>
               </div>
             </div>
@@ -41,7 +33,7 @@ const About = () => {
                     className={`relative mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px] `}
                   >
                     <Image
-                      src="/images/about/about-image-01.jpg"
+                      src="/images/about/about-image-02.jpg"
                       alt="about image"
                       fill
                       className="h-full w-full object-cover object-center"
@@ -52,7 +44,7 @@ const About = () => {
                 <div className="w-full px-2 sm:w-1/2 sm:px-4 lg:px-2 xl:px-4">
                   <div className="relative mb-4 sm:mb-8 sm:h-[220px] md:h-[346px] lg:mb-4 lg:h-[225px] xl:mb-8 xl:h-[310px]">
                     <Image
-                      src="/images/about/about-image-02.jpg"
+                      src="/images/about/about-image-03.jpg"
                       alt="about image"
                       fill
                       className="h-full w-full object-cover object-center"
@@ -62,13 +54,13 @@ const About = () => {
                   <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
                     <div>
                       <span className="block text-5xl font-extrabold text-white">
-                        09
+                        10/10
                       </span>
                       <span className="block text-base font-semibold text-white">
-                        We have
+                        Audio Sentiment Analysis
                       </span>
                       <span className="block text-base font-medium text-white text-opacity-70">
-                        Years of experience
+                        Empowering researchers, students, and enthusiasts!
                       </span>
                     </div>
                     <div>

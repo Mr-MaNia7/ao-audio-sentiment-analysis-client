@@ -61,13 +61,16 @@ const AudioAnalyse: React.FC = () => {
             <div className="ud-contact-content-wrapper">
               <div className="ud-contact-title mb-12 lg:mb-[150px]">
                 <span className="mb-6 block text-base font-medium text-dark dark:text-white">
-                  RECORD AND ANALYZE
+                  ANALYZE AUDIO
                 </span>
                 <h2 className="max-w-[260px] text-[35px] font-semibold leading-[1.14] text-dark dark:text-white">
-                  Record and Analyze Your Audio
+                  Record/Upload & Analyze Your Audio
                 </h2>
                 <p className="text-lg leading-relaxed m-4 text-gray-600 dark:text-dark-6">
-                  Use the recorder to capture your audio message. Once you stop recording, your message will be automatically uploaded for sentiment analysis.
+                  Use the recorder to capture your audio message. 
+                </p>
+                <p className="text-lg leading-relaxed m-4 text-gray-600 dark:text-dark-6">
+                  Once you stop recording, your message will be automatically uploaded for sentiment analysis.
                 </p>
                 <p className="text-lg leading-relaxed m-4 text-gray-600 dark:text-dark-6">
                   Alternatively, you can upload an audio file for analysis.
