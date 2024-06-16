@@ -9,7 +9,7 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "Audio Sentiment Analysis",
+    title: "Sentiment",
     path: "/audio-sentiment-analysis",
     newTab: false, 
   },
