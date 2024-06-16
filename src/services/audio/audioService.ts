@@ -33,7 +33,7 @@ export const uploadAudio = async (
       const user = res.data;
       formData.append('user_id', user.id as string);
     } catch (error: any) {
-      toast.error(error?.response.data);
+      toast.error(error.message);
       return;
     }
   }
