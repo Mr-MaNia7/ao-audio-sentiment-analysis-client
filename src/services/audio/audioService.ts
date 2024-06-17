@@ -56,7 +56,7 @@ export const uploadAudio = async (
     
     setAnalysisResults(analysisResults ? [...analysisResults, result] : [result]);
   } catch (error: any) {
-    toast.error(error?.response.data);
+    toast.error(error?.response?.data);
   } finally {
     setUploading(false);
     toast.success("Audio uploaded successfully.");
