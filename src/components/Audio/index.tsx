@@ -127,7 +127,7 @@ const AudioAnalyse: React.FC = () => {
                           <span className={`font-bold ${result.sentiment === 'positive' ? 'text-green-600' : result.sentiment === 'negative' ? 'text-red-600' : 'text-yellow-600'}`}>
                             Analysis Result: {result.sentiment}
                           </span>
-                          <p className="ml-1 text-blue-800">Confidence Score: {(result.confidence_score).toFixed(2)}%</p>
+                          <p className="font-bold ml-1 text-cyan-700">Confidence Score: {(result.confidence_score).toFixed(2)}%</p>
                         </div>
                       </div>
                     ))}
