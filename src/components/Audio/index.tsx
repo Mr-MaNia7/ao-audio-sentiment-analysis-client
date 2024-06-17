@@ -5,32 +5,34 @@ import { AudioRecorder } from 'react-audio-voice-recorder';
 import '../../styles/audio.css';
 import { useSession } from "next-auth/react";
 import { useRouter } from 'next/navigation';
-import { uploadAudio } from '@/services/audio/audioService';
+import { AnalysisResult, uploadAudio } from '@/services/audio/audioService';
 import Loader from '../Common/Loader';
 import toast from 'react-hot-toast';
 
 const AudioAnalyse: React.FC = () => {
+  const [audios, setAudios] = useState<Blob[]>([]);
+  const [analysisResults, setAnalysisResults] = useState<AnalysisResult[] | null>(null);
   const [uploading, setUploading] = useState<boolean>(false);
-  const [analysisResult, setAnalysisResult] = useState<string | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
   const { data: session, status } = useSession();
   const router = useRouter();
 
-  const addAudioElement = (blob: Blob): void => {
+  const addAudioElement = async (blob: Blob): Promise<void> => {
     if (status !== "authenticated") {
       toast.error("Please first sign in to analyze audio.");
       router.push("/signin");
       return;
     }
-    const url = URL.createObjectURL(blob);
-    const audioContainer = document.getElementById('audioContainer') as HTMLDivElement;
-    const audio = document.createElement('audio');
-    audio.className = 'mt-4';
-    audio.src = url;
-    audio.controls = true;
-    audio.style.width = '100%';
-    audioContainer.appendChild(audio);
-    uploadAudio(blob, setAnalysisResult, setUploading, session);
+
+    setAudios([...audios, blob]); // Add blob to audios state
+
+    try {
+      await uploadAudio(blob, setAnalysisResults, analysisResults, setUploading, session);
+      console.log("Audio results.", analysisResults);
+    } catch (error) {
+      console.error(error);
+      toast.error('Error uploading audio.');
+    }
   };
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>): void => {
@@ -107,19 +109,30 @@ const AudioAnalyse: React.FC = () => {
                   <div className="flex w-full items-center justify-center 
                   rounded-md px-5 py-3 text-base text-white border border-primary bg-primary
                   transition duration-300 ease-in-out mt-4">
-                    <strong>Uploading</strong> <Loader />
+                    <strong>Processing</strong> <Loader />
                   </div>
                 )}
 
-                {analysisResult && (
-                  <div className="flex w-full items-center justify-center 
-                  rounded-md px-5 py-3 text-base text-white border border-primary bg-primary
-                  transition duration-300 ease-in-out mt-4">
-                    <strong>Analysis Result:</strong> {analysisResult}
+                {analysisResults && (
+                  <div id="audioContainer" className="grid gap-4 grid-cols-1">
+                    {analysisResults.map((result, index) => (
+                      <div key={index} className="p-4 bg-white bg-opacity-80 rounded-lg mx-auto" style={{ maxWidth: '400px', marginTop: '20px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }}>
+                        <audio
+                          src={URL.createObjectURL(audios[index])}
+                          controls
+                          className="mb-2"
+                          style={{ width: '100%' }}
+                        />
+                        <div className="text-center">
+                          <span className={`font-bold ${result.sentiment === 'positive' ? 'text-green-600' : result.sentiment === 'negative' ? 'text-red-600' : 'text-yellow-600'}`}>
+                            Analysis Result: {result.sentiment}
+                          </span>
+                          <p className="ml-1 text-blue-800">Confidence Score: {(result.confidence_score).toFixed(2)}%</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 )}
-
-                <div id="audioContainer" className="mt-4"></div>
 
               </div>
             </div>

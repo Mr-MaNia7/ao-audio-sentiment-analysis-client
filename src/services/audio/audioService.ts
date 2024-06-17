@@ -4,13 +4,15 @@ import { Session } from 'next-auth';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 
-interface UploadAudioResponse {
+export interface AnalysisResult {
   sentiment: string;
+  confidence_score: number;
 }
 
 export const uploadAudio = async (
   blob: Blob,
-  setAnalysisResult: Dispatch<SetStateAction<string | null>>,
+  setAnalysisResults: Dispatch<SetStateAction<AnalysisResult[] | null>>,
+  analysisResults: AnalysisResult[] | null,
   setUploading: Dispatch<SetStateAction<boolean>>,
   session: Session | null,
 ): Promise<void> => {
@@ -46,8 +48,13 @@ export const uploadAudio = async (
     }
     console.log("response", res);
 
-    const data: UploadAudioResponse = res.data;
-    setAnalysisResult(data.sentiment);
+    const data: AnalysisResult = res.data;
+    const result = {
+      sentiment: data.sentiment,
+      confidence_score: data.confidence_score,
+    };
+    
+    setAnalysisResults(analysisResults ? [...analysisResults, result] : [result]);
   } catch (error: any) {
     toast.error(error?.response.data);
   } finally {
