@@ -1,4 +1,5 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
+import DocumenttViewer from "@/components/Blog/DocViewer";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";

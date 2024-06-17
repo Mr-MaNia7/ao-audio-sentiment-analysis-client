@@ -44,6 +44,7 @@ export const uploadAudio = async (
       toast.error("User not found.");
       return;
     }
+    console.log("response", res);
 
     const data: UploadAudioResponse = res.data;
     setAnalysisResult(data.sentiment);

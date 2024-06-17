@@ -28,6 +28,16 @@ const Hero = () => {
                     <GetStartedButton />
                   </li>
                   <li>
+                  <div>
+                      <Link
+                        href="/blogs/aosa-research-paper"
+                        className="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2"
+                      >
+                        Our Research Paper
+                      </Link>
+                  </div>
+                  </li>
+                  <li>
                     <Link
                       href="https://github.com/Mr-MaNia7/ao-audio-sentiment-analysis"
                       target="_blank"

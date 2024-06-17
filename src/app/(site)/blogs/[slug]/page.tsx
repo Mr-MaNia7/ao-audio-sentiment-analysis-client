@@ -1,3 +1,4 @@
+import DocumenttViewer from "@/components/Blog/DocViewer";
 import Newsletter from "@/components/Blog/Newsletter";
 import PopularArticle from "@/components/Blog/PopularArticle";
 import SingleBlog from "@/components/Blog/SingleBlog";
@@ -169,6 +170,7 @@ export default async function Post({ params }: Props) {
                   </div>
                 </div>
               </div>
+
               <div className="-mx-4 flex flex-wrap">
                 <div className="w-full px-4 lg:w-8/12">
                   <div className="blog-details xl:pr-10">
@@ -216,6 +218,8 @@ export default async function Post({ params }: Props) {
               </div>
             </div>
           </div>
+
+          <DocumenttViewer/>
 
           <div className="-mx-4 flex flex-wrap">
             <div
